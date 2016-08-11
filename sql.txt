@@ -1,0 +1,45 @@
+CREATE TABLE `tbl_user_master` (
+  `user_id` INT NOT NULL AUTO_INCREMENT,
+  `user_first_name` VARCHAR(45) NOT NULL,
+  `user_last_name` VARCHAR(45) NULL,
+  `user_name` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(100) NOT NULL,
+  `user_email_id` VARCHAR(45) NOT NULL,
+  `user_phone_number` VARCHAR(45) NOT NULL,
+  `user_dob` DATE NOT NULL,
+  `contact_number` VARCHAR(45) NULL,
+  `user_role` VARCHAR(45) NULL,
+  `status` TINYINT NOT NULL,
+  `added_on` TIMESTAMP NULL,
+  `added_by` INT NULL,
+  `modified_on` TIMESTAMP NULL,
+  `modified_by` INT NULL,
+  PRIMARY KEY (`user_id`));
+
+
+
+CREATE TABLE `tbl_role_master` (
+  `role_id` INT NOT NULL AUTO_INCREMENT,
+  `role_name` VARCHAR(45) NOT NULL,
+  `role_menus` TEXT NOT NULL,
+  `status` TINYINT NOT NULL,
+  `added_on` TIMESTAMP NULL,
+  `added_by` INT NULL,
+  `modified_on` TIMESTAMP NULL,
+  `modified_by` INT NULL,
+  PRIMARY KEY (`role_id`));
+
+
+CREATE TABLE `test`.`tbl_menu_master` (
+  `menu_id` INT NOT NULL AUTO_INCREMENT,
+  `menu_name` VARCHAR(45) NOT NULL,
+  `menu_icon` VARCHAR(45) NOT NULL,
+  `menu_parent_id` INT NOT NULL,
+  `menu_sequence` INT NOT NULL,
+  `menu_status` VARCHAR(45) NOT NULL,
+  `added_on` TIMESTAMP NULL,
+  `added_by` INT NULL,
+  `modified_on` TIMESTAMP NULL,
+  `modified_by` INT NULL,
+  PRIMARY KEY (`menu_id`));
+
